@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #07090e;
+    --bg-secondary: #0d121f;
+    --card-bg: rgba(15, 21, 35, 0.75);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --accent-teal: #05d5aa;
+    --accent-cyan: #00f2fe;
+    --accent-purple: #8b5cf6;
+  }
+
+  body {
+    background-color: #07090e;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom glow and backdrop effects matching reference design */
+.glass-panel {
+  background: rgba(14, 19, 32, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.glass-panel-glow {
+  background: linear-gradient(135deg, rgba(20, 28, 48, 0.85) 0%, rgba(12, 17, 30, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(5, 213, 170, 0.35);
+  box-shadow: 0 0 25px -5px rgba(5, 213, 170, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+}
+
+.neon-btn {
+  background: linear-gradient(135deg, #05d5aa 0%, #00f2fe 100%);
+  color: #07090e;
+  font-weight: 600;
+  box-shadow: 0 0 20px -3px rgba(5, 213, 170, 0.45);
+  transition: all 0.25s ease;
+}
+
+.neon-btn:hover {
+  box-shadow: 0 0 30px 2px rgba(0, 242, 254, 0.65);
+  transform: translateY(-1px);
+}
+
+.subtle-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.subtle-scroll::-webkit-scrollbar-track {
+  background: rgba(15, 21, 35, 0.5);
+}
+.subtle-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+.subtle-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(5, 213, 170, 0.35);
+}
